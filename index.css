@@ -1,0 +1,139 @@
+:root{
+    --color-white: #fff;
+    --color-dark1: rgb(39, 39, 39);
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #141313;
+    --color-dark5: #343434;
+    --color-cian: #00ffea;
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+      
+  }
+  
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+      justify-content: space-between;
+      background-color: var(--color-dark1);
+      display: flex;
+      flex-wrap: wrap;
+
+      color: var(--color-cian);
+      flex: 1 1 100vw;
+      
+
+  }
+  .img_logo_header{
+    width: 9%;
+  }
+  
+  header{
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 100vw;
+      box-shadow: 1px 1px 4px var(--color-dark4);
+      background: var(--color-dark2)
+      
+  }
+
+  #openMenu, #closeMenu {
+      border: none;
+      background: none;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 0px 5px 0px 5px;
+      cursor: pointer;
+      display: none;
+  }
+
+  nav{
+      justify-content: flex-end;
+      display: flex;
+      margin: 3px;
+      flex: 1 1 100vw;
+      background: var(--color-dark2)
+  }
+
+
+  a{
+   text-decoration: none;
+   color: inherit;
+  }
+
+  nav a{
+      margin: 3%;
+      font-size: 20pt;
+  }
+
+  main{
+      display: flex;
+      margin: 3px;
+      flex: 20 1 500px;
+      background: var(--color-dark1)
+  }
+  main section{
+      width: 100%;
+      height: 2000px;
+      margin: 10px;
+      background: var(--color-dark1)
+  }
+
+  footer{
+      color: var(--color-white);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      margin: 3px;
+      flex: 1 1 100vw;
+      align-items: center;
+      background: var(--color-dark3)      
+  }
+
+  
+  @media only screen and (max-widyh: 923px) {
+      header{
+          order: 0;
+      }
+      main{
+        order: 1; 
+      }
+
+      aside{
+          flex: 1 1 100vw;
+          order: 2;
+      }
+      footer{
+          order: 3;
+      }
+  }
+
+  @media only screen and (max-width: 717px){
+      #openMenu, #closeMenu {
+          display: block;    
+      }
+
+      #openMenu {
+          margin-left: auto;
+      }
+
+      #closeMenu {
+          position: fixed;
+          right: 15px;
+          top: 15px;
+      }
+
+      nav {
+          transition: 0.3s;
+          opacity: 0;
+          display: none;
+          margin: 0;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          flex-direction: column;
+          width: 100vw;
+          background: var(--color-white)
+      }
+  }
